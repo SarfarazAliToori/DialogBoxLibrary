@@ -19,13 +19,14 @@ object MyDialogBox {
                    title: String,
                    message: String,
                    positiveButtonName: String,
-                    NegativeButtonName: String,
-                    NeutralButtonName: String) {
-       MaterialAlertDialogBuilder(context)
+                   NegativeButtonName: String,
+                   NeutralButtonName: String,
+                   onPositiveButtonToastMsg: String) : MaterialAlertDialogBuilder {
+       val dialog =  MaterialAlertDialogBuilder(context)
             .setTitle(title)
             .setMessage(message)
             .setPositiveButton(positiveButtonName) { p0, p1 ->
-                Toast.makeText(context, "You Click Yes Button", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, onPositiveButtonToastMsg, Toast.LENGTH_SHORT).show()
                 p0.dismiss()
             }
            .setNegativeButton(NegativeButtonName) { p0, p1 ->
@@ -36,6 +37,8 @@ object MyDialogBox {
                Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show()
                p0.dismiss()
            }
+
+        return dialog
     }
 
 
@@ -44,17 +47,19 @@ object MyDialogBox {
                    title: String,
                    message: String,
                    positiveButtonName: String,
-                   NegativeButtonName: String) {
-        MaterialAlertDialogBuilder(context)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveButton(positiveButtonName) { p0, p1 ->
-                Toast.makeText(context, "You Click Yes Button", Toast.LENGTH_SHORT).show()
-                p0.dismiss()
-            }
-            .setNegativeButton(NegativeButtonName) { p0, p1 ->
-                Toast.makeText(context, "Ok Enjoy", Toast.LENGTH_SHORT).show()
-                p0.dismiss()
-            }
+                   NegativeButtonName: String): MaterialAlertDialogBuilder {
+        val dialog = MaterialAlertDialogBuilder(context)
+                    .setTitle(title)
+                    .setMessage(message)
+                    .setPositiveButton(positiveButtonName) { p0, p1 ->
+                        Toast.makeText(context, "You Click Yes Button", Toast.LENGTH_SHORT).show()
+                        p0.dismiss()
+                    }
+                    .setNegativeButton(NegativeButtonName) { p0, p1 ->
+                        Toast.makeText(context, "Ok Enjoy", Toast.LENGTH_SHORT).show()
+                        p0.dismiss()
+                    }
+
+        return dialog
     }
 }
