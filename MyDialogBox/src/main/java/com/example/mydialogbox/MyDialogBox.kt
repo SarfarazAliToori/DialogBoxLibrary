@@ -107,9 +107,10 @@ object MyDialogBox {
         val no = mDialogView.findViewById<Button>(noButtonId)
         val mAlertDialog = AlertDialog.Builder(context)
             .setView(mDialogView).show()
-        mAlertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+//        mAlertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         // action perform on buttons
         exit.setOnClickListener(View.OnClickListener {
+            mAlertDialog.ownerActivity?.finish()
             Toast.makeText(context, "Exit", Toast.LENGTH_SHORT).show()
         })
 
