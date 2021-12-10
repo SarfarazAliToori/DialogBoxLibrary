@@ -8,7 +8,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-object MyDialogBox : AppCompatActivity() {
+class MyDialogBox(ap : AppCompatActivity) {
+    val mAppContex = ap
 
     fun mToast(context: Context, message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
@@ -106,7 +107,7 @@ object MyDialogBox : AppCompatActivity() {
 //        mAlertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         // action perform on buttons
         exit.setOnClickListener(View.OnClickListener {
-            finish()
+            mAppContex.finish()
             Toast.makeText(context, "Exit", Toast.LENGTH_SHORT).show()
             mAlertDialog.dismiss()
         })
