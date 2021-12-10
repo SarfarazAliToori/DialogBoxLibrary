@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../.gradle/caches/transforms-3/f151290c6ded99e73cc30cce4233ae32/transformed/core-1.7.0/res/layout/custom_dialog.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18125" />
       </map>
     </option>
