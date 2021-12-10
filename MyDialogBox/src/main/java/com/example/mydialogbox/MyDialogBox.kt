@@ -37,6 +37,7 @@ object MyDialogBox {
                Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show()
                p0.dismiss()
            }
+        dialog.show()
 
         return dialog
     }
@@ -59,6 +60,7 @@ object MyDialogBox {
                         Toast.makeText(context, "Ok Enjoy", Toast.LENGTH_SHORT).show()
                         p0.dismiss()
                     }
+        dialog.show()
 
         return dialog
     }
