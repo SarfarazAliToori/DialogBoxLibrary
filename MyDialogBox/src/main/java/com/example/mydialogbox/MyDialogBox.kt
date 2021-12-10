@@ -1,18 +1,14 @@
 package com.example.mydialogbox
 
 import android.content.Context
-import android.content.DialogInterface
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.View
 import android.widget.Button
-import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.constraintlayout.widget.ConstraintSet
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-object MyDialogBox {
+object MyDialogBox : AppCompatActivity() {
 
     fun mToast(context: Context, message: String) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
@@ -100,7 +96,7 @@ object MyDialogBox {
         context: Context,
         layoutResourceId: Int,
         yesButtonId: Int,
-        noButtonId: Int,
+        noButtonId: Int
     ): AlertDialog {
         val mDialogView = View.inflate(context,layoutResourceId,null)
         val exit = mDialogView.findViewById<Button>(yesButtonId)
@@ -110,8 +106,9 @@ object MyDialogBox {
 //        mAlertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         // action perform on buttons
         exit.setOnClickListener(View.OnClickListener {
-            mAlertDialog.ownerActivity?.finish()
+            finish()
             Toast.makeText(context, "Exit", Toast.LENGTH_SHORT).show()
+            mAlertDialog.dismiss()
         })
 
         no.setOnClickListener(View.OnClickListener {
