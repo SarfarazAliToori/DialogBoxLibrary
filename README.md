@@ -29,10 +29,17 @@ Dialog Box Using Library. it's very simple
  
  >How to Use:
  
- ```val myDialogBox = MyDialogBox(this)
+ ```
+    val myDialogBox = MyDialogBox(this)
     myDialogBox.mDialogBox(this, "Alter Dialog !", "Hi How are You I am Dialog Box From MyDialog Library.", "Ok button", "NO button")
+    
     myDialogBox.mDialogBox(this, "Alter Dialog !", "Hi How are You I am Dialog Box From MyDialog Library.", "Ok button", "NO button", "toast message on ok click")
-
+    
+    myDialogBox.mExitDialogBoxWithCustomLayoutWithImage(this,"your title", "your message", "on Exit toast message", "on No toast message",Color.MAGENTA, Color.GREEN)
+    
+    myDialogBox.mExitDialogBoxWithCustomLayoutWithImage(this,R.drawable.your_image,"your title", "your message", "on Exit toast message", "on No toast 	  message",Color.MAGENTA, Color.GREEN)
+    
+    etc...
 
  ```
  
