@@ -29,9 +29,9 @@ Dialog Box Using Library. it's very simple
  
  >How to Use:
  
- ```
-    MyDialogBox.mDialogBox(this, "Alter Dialog !", "Hi How are You I am Dialog Box From MyDialog Library.", "Ok button", "NO button")
-    MyDialogBox.mDialogBox(this, "Alter Dialog !", "Hi How are You I am Dialog Box From MyDialog Library.", "Ok button", "NO button", "toast message on ok click")
+ ```val myDialogBox = MyDialogBox(this)
+    myDialogBox.mDialogBox(this, "Alter Dialog !", "Hi How are You I am Dialog Box From MyDialog Library.", "Ok button", "NO button")
+    myDialogBox.mDialogBox(this, "Alter Dialog !", "Hi How are You I am Dialog Box From MyDialog Library.", "Ok button", "NO button", "toast message on ok click")
 
 
  ```
