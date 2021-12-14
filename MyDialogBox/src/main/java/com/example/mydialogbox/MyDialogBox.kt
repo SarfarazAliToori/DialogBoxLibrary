@@ -3,8 +3,11 @@ package com.example.mydialogbox
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
+import android.text.Layout
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -227,6 +230,77 @@ class MyDialogBox(ap : AppCompatActivity) {
 
         return mAlertDialog
     }
+
+
+
+    fun mExitDialogBoxWithCustomLayoutWithImage(
+        context: Context,
+        image: Int,
+        title: String,
+        message: String,
+        onExitButtonToastMsg: String,
+        onNoButtonToastMsg: String,
+        backgroundColor: Int,
+        buttonsBackgroundColor: Int
+    ): AlertDialog {
+        val mDialogView = View.inflate(context,R.layout.dialog_box_with_image,null)
+        mDialogView.setBackgroundColor(backgroundColor)
+        val img = mDialogView.findViewById<ImageView>(R.id.image_view)
+        img.setImageResource(image)
+        val yes = mDialogView.findViewById<Button>(R.id.btn_yes)
+        val no = mDialogView.findViewById<Button>(R.id.btn_no)
+        yes.setBackgroundColor(buttonsBackgroundColor)
+        no.setBackgroundColor(buttonsBackgroundColor)
+        val mtitle = mDialogView.findViewById<TextView>(R.id.tv_title)
+        val mmessage = mDialogView.findViewById<TextView>(R.id.tv_message)
+        mtitle.text = title
+        mmessage.text = message
+        val mAlertDialog = AlertDialog.Builder(context)
+            .setView(mDialogView).show()
+        mAlertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        // action perform on buttons
+        yes.setOnClickListener(View.OnClickListener {
+            mAppContex.finish()
+            Toast.makeText(context, onExitButtonToastMsg, Toast.LENGTH_SHORT).show()
+            mAlertDialog.dismiss()
+        })
+
+        no.setOnClickListener(View.OnClickListener {
+            mAlertDialog.dismiss()
+            Toast.makeText(context, onNoButtonToastMsg, Toast.LENGTH_SHORT).show()
+        })
+
+        return mAlertDialog
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // this function is accessing mdialog_box_design in your project.

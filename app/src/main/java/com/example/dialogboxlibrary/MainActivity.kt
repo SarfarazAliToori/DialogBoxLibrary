@@ -16,13 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //setContentView(myDialogBox.libraryUi(this))
 //        frameLayout = findViewById(R.id.fram)
-        //val myDialogBox = MyDialogBox(this)
+        val myDialogBox = MyDialogBox(this)
         //myDialogBox.mExitDialogBoxWithCustomLayout(this,R.layout.dialog_box_design, R.id.btn_yes,R.id.btn_no)
 //        myDialogBox.mExitDialogBoxWithCustomLayout(this,"Hello Title","Hello dialog message","Exit", "Ok Enjoy",
 //            Color.CYAN,Color.GREEN)
         //myDialogBox.libraryUi(this)
 
-
+        myDialogBox.mExitDialogBoxWithCustomLayoutWithImage(
+            this,R.drawable.download,"hello", "thlleo ldjf d", "dkfl", "djfj",Color.MAGENTA, Color.GREEN
+        )
     }
 
 

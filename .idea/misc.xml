@@ -5,9 +5,11 @@
       <map>
         <entry key="../../.gradle/caches/transforms-3/f151290c6ded99e73cc30cce4233ae32/transformed/core-1.7.0/res/layout/custom_dialog.xml" value="0.19583333333333333" />
         <entry key="MyDialogBox/src/main/res/drawable/m_dialog_design.xml" value="0.21197916666666666" />
+        <entry key="MyDialogBox/src/main/res/layout/dialog_box_with_image.xml" value="0.1897644927536232" />
         <entry key="MyDialogBox/src/main/res/layout/mdialog_box_design.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/dialog_box_design.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/dialog_box_with_image.xml" value="0.1897644927536232" />
       </map>
     </option>
   </component>
