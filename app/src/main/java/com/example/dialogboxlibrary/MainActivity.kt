@@ -10,6 +10,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val myDialogBox = MyDialogBox(this)
+        myDialogBox.mExitDialogBoxWithCustomLayout(this,R.layout.dialog_box_design, R.id.btn_yes,R.id.btn_no)
     }
 
 
