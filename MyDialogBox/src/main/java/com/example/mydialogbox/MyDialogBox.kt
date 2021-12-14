@@ -230,12 +230,12 @@ class MyDialogBox(ap : AppCompatActivity) {
 
 
     // this function is accessing mdialog_box_design in your project.
-//    fun libraryUi(
-//        context: Context
-//    ): View {
-//       val mDialogView = View.inflate(context,R.layout.mdialog_box_design,null)
-//        return mDialogView
-//    }
+    fun libraryUi(
+        context: Context
+    ): View {
+       val mDialogView = View.inflate(context,R.layout.mdialog_box_design,null)
+        return mDialogView
+    }
 
 
 }
