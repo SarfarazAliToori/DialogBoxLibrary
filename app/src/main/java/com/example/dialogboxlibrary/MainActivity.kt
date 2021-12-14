@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
 //            Color.CYAN,Color.GREEN)
         //myDialogBox.libraryUi(this)
 
-        myDialogBox.mExitDialogBoxWithCustomLayoutWithImage(
-            this,R.drawable.download,"hello", "thlleo ldjf d", "dkfl", "djfj",Color.MAGENTA, Color.GREEN
-        )
+//        myDialogBox.mExitDialogBoxWithCustomLayoutWithImage(
+//            this,R.drawable.download,"hello", "thlleo ldjf d", "dkfl", "djfj",Color.MAGENTA, Color.GREEN
+//        )
     }
 
 
