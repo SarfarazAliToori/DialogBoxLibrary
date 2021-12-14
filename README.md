@@ -18,7 +18,7 @@ Dialog Box Using Library. it's very simple
   
  ```
     	dependencies {
-	        implementation 'com.github.SarfarazAliToori:DialogBoxLibrary:1.4'
+	        implementation 'com.github.SarfarazAliToori:DialogBoxLibrary:latest-version'
 	}
   
  ```
